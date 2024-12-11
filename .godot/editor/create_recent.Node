@@ -1,0 +1,15 @@
+Timer
+CollisionShape2D
+Area2D
+AnimationPlayer
+ColorRect
+TextureRect
+CanvasLayer
+AnimationTree
+Label
+Panel
+Sprite2D
+Node
+TileMapLayer
+AnimatedSprite2D
+Node2D

@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://5poy5t11unk2"]
+
+[ext_resource type="FontFile" uid="uid://ridyc3bw3omt" path="res://FATPIXEL.TTF" id="1_nqmaq"]
+[ext_resource type="FontFile" uid="uid://6knlw23yj6vi" path="res://Freedom-nZ4J.otf" id="2_ynsm2"]
+
+[resource]
+default_font = ExtResource("2_ynsm2")
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/shadow_offset_x = 8
+RichTextLabel/constants/shadow_offset_y = 12
+RichTextLabel/font_sizes/bold_font_size = 16
+RichTextLabel/font_sizes/normal_font_size = 62
+RichTextLabel/fonts/normal_font = ExtResource("1_nqmaq")
