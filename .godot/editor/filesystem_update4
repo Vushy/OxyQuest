@@ -1,10 +1,10 @@
-res://scene/MainMenu.tscn
+res://scene/battle.tscn
 res://panel.tres
 res://battle.tres
 res://tileset1.tres
 res://new_theme1.tres
-res://scene/battle.tscn
 res://scene/battle_player.tscn
 res://scene/enemy_slime_battle.tscn
 res://scene/world.tscn
 res://scene/Portal.tscn
+res://scene/MainMenu.tscn
