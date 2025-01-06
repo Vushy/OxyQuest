@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2g1xvn8es8n1"]
+
+[ext_resource type="Texture2D" uid="uid://d0202vecygi5a" path="res://Idle.png" id="1_01cii"]
+[ext_resource type="Script" path="res://script/enemy/enemy_1.gd" id="2_ksjye"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2x4c"]
+atlas = ExtResource("1_01cii")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk3ul"]
+atlas = ExtResource("1_01cii")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omx4a"]
+atlas = ExtResource("1_01cii")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kidy"]
+atlas = ExtResource("1_01cii")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uvvoa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2x4c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk3ul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omx4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kidy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.792157, 0.341176, 0.792157, 1)
+sprite_frames = SubResource("SpriteFrames_uvvoa")
+animation = &"idle"
+frame_progress = 0.329074
+speed_scale = 0.4
+script = ExtResource("2_ksjye")
+metadata/_aseprite_wizard_interface_config_ = {
+"slice_section": false
+}

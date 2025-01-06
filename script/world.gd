@@ -4,9 +4,11 @@ extends Node2D
 @onready var transition = $"."/transition
 @onready var player = $player
 @onready var heartsContainer =  $CanvasLayer/HBoxContainer
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready():
 	transition.play("fade_in")
+	audio_stream_player_2d.play()
 	heartsContainer.setMaxHeart(player.maxHealth)
 	heartsContainer.updateHearts(player.Playerhealth)
 	player.healthChanged.connect(heartsContainer.updateHearts)

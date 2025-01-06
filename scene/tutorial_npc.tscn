@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://bce53l6xek7r3"]
+
+[ext_resource type="Script" path="res://script/tutorial_npc.gd" id="1_ex4dy"]
+[ext_resource type="Texture2D" uid="uid://c2de75gk4o02o" path="res://art/characters/NPC/NPC Merchant-interaction-entry.png" id="2_n0wne"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyg3n"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(0, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgkku"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(110, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mb1e"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(220, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytfdy"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(330, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbvvk"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(440, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36o6s"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(550, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_br310"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(660, 0, 110, 110)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj1wf"]
+atlas = ExtResource("2_n0wne")
+region = Rect2(770, 0, 110, 110)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kswpr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyg3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cgkku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mb1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytfdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbvvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36o6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_br310")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj1wf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_coxbo"]
+radius = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_si3w5"]
+radius = 6.08276
+
+[node name="TutorialNPC" type="CharacterBody2D"]
+position = Vector2(2, -2)
+script = ExtResource("1_ex4dy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 0)
+scale = Vector2(0.422727, 0.418182)
+sprite_frames = SubResource("SpriteFrames_kswpr")
+animation = &"idle"
+frame_progress = 0.736317
+speed_scale = 0.8
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-2, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 7
+visibility_layer = 7
+y_sort_enabled = true
+position = Vector2(2, 0)
+shape = SubResource("CircleShape2D_coxbo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_si3w5")

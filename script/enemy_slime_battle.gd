@@ -82,7 +82,7 @@ func updateEnemyHealth():
 		enemyState.travel('death')
 		print('the enemy is dead')
 		
-		await get_tree().create_timer(1).timeout
+		#await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://scene/portal.tscn")
 		
 	

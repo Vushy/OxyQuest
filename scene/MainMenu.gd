@@ -2,11 +2,12 @@ extends Node2D
 
 @onready var transition = $CanvasLayer/transition
 @onready var start = $CanvasLayer/start
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	start.play("title_in")
-
+	audio_stream_player_2d.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -9,6 +9,8 @@ var current_scene = "world"
 var transition_scene = false
 var enemyCollide = false
 
+
+
 #players position
 var player_exit_pos_x = 584
 var player_exit_pos_y = 251
@@ -94,7 +96,6 @@ func set_enemy_position(position):
 func get_enemy_position():
 	
 	return answerCorrect
-
 
 
 func finish_changescene():
