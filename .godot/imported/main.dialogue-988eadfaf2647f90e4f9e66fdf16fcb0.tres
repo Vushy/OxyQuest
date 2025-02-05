@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_35s23"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_pdg2q"]
 
 [resource]
-script = ExtResource("1_35s23")
+script = ExtResource("1_pdg2q")
 using_states = PackedStringArray()
 titles = {
 "start": "3",
 "video_lesson": "23"
 }
-character_names = PackedStringArray("Trainer", "LEO")
+character_names = PackedStringArray("Trainer", "Chalice of Knowledge")
 first_title = "3"
 lines = {
 "1": {
@@ -103,7 +103,7 @@ lines = {
 "type": &"title"
 },
 "23": {
-"character": "LEO",
+"character": "Chalice of Knowledge",
 "character_replacements": Array[Dictionary]([]),
 "id": "23",
 "next_id": "24",
@@ -188,7 +188,7 @@ lines = {
 "type": &"mutation"
 },
 "28": {
-"character": "LEO",
+"character": "Chalice of Knowledge",
 "character_replacements": Array[Dictionary]([]),
 "id": "28",
 "next_id": "29",
@@ -265,7 +265,7 @@ lines = {
 "type": &"mutation"
 },
 "32": {
-"character": "LEO",
+"character": "Chalice of Knowledge",
 "character_replacements": Array[Dictionary]([]),
 "id": "32",
 "next_id": "33",
@@ -396,15 +396,15 @@ set dialogueStarted = true
 
 
 
-LEO: [[Hi|Hello|Howdy]], Are you ready for the lesson?
+Chalice of Knowledge: [[Hi|Hello|Howdy]], Are you ready for the lesson?
 set dialogueStarted = true
 if play == false:
 	- Yes
 		set play = true
-		LEO: Okay! Here we go.
+		Chalice of Knowledge: Okay! Here we go.
 		set dialogueFinished = true
 	- No
 		set dialogueFinished = true
-		LEO: Sure take your time just come back later!
+		Chalice of Knowledge: Sure take your time just come back later!
 => END"
 metadata/dialogue_manager_version = "2.41.4"
