@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CollisionShape2D
 Area2D
 TileMapLayer
@@ -12,3 +13,20 @@ Node2D
 AnimatedSprite2D
 ShapeCast2D
 SpotLight3D
+=======
+Timer
+CollisionShape2D
+Area2D
+AnimationPlayer
+ColorRect
+TextureRect
+CanvasLayer
+AnimationTree
+Label
+Panel
+Sprite2D
+Node
+TileMapLayer
+AnimatedSprite2D
+Node2D
+>>>>>>> parent of 9d0b31e (Updates 2025)

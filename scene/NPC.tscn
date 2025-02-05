@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://4l1ja4je440s"]
+[gd_scene load_steps=15 format=3 uid="uid://4l1ja4je440s"]
 
 [ext_resource type="Script" path="res://script/NPC.gd" id="1_mwlws"]
 [ext_resource type="Texture2D" uid="uid://nppm2muof4xn" path="res://art/characters/Red DefaultCharacter-Idle.png" id="2_vnk3d"]
-[ext_resource type="Texture2D" uid="uid://ba55y8qny52n5" path="res://art/objects/icon_interrogation.png" id="3_wloxy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o1hw4"]
 atlas = ExtResource("2_vnk3d")
@@ -122,7 +121,3 @@ offset = Vector2(0, -5.13)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_dgtwm")
-
-[node name="IconInterrogation" type="Sprite2D" parent="."]
-position = Vector2(0, -25)
-texture = ExtResource("3_wloxy")

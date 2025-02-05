@@ -20,14 +20,14 @@ set dialogueStarted = true
 
 
 
-Chalice of Knowledge: [[Hi|Hello|Howdy]], Are you ready for the lesson?
+LEO: [[Hi|Hello|Howdy]], Are you ready for the lesson?
 set dialogueStarted = true
 if play == false:
 	- Yes
 		set play = true
-		Chalice of Knowledge: Okay! Here we go.
+		LEO: Okay! Here we go.
 		set dialogueFinished = true
 	- No
 		set dialogueFinished = true
-		Chalice of Knowledge: Sure take your time just come back later!
+		LEO: Sure take your time just come back later!
 => END
