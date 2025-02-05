@@ -151,6 +151,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="transition"]
+visible = false
 offset_right = 602.0
 offset_bottom = 337.0
 
@@ -163,8 +164,7 @@ position = Vector2(304.25, 33.366)
 scale = Vector2(0.359375, 0.293922)
 sprite_frames = SubResource("SpriteFrames_d4c7i")
 animation = &"portal"
-frame = 7
-frame_progress = 0.975712
+frame_progress = 0.640559
 
 [node name="Area2D" type="Area2D" parent="."]
 

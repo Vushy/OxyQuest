@@ -1,11 +1,11 @@
 CollisionShape2D
 Area2D
+TileMapLayer
 RichTextLabel
 ColorRect
 CanvasLayer
 AudioStreamPlayer2D
 AudioListener2D
-TileMapLayer
 Sprite2D
 CharacterBody2D
 Node2D

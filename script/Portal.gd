@@ -32,4 +32,5 @@ func _on_transition_area_body_entered(body: Node2D) -> void:
 	if body.has_method('player'):
 		await get_tree().create_timer(2).timeout
 		get_tree().change_scene_to_file("res://scene/Trachea_Paths.tscn")
+		print('inside')
 	

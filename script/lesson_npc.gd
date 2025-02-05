@@ -37,13 +37,15 @@ func lesson_npc():
 		interacting = false
 		return
 
-func _on_interact_zone_body_entered(body):
+
+
+func _on_interact_zone_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
 		player = body
 		player_interact_zone = true
 		print("chatting with npc")
 
 
-func _on_interact_zone_body_exited(body):
+func _on_interact_zone_body_exited(body: Node2D) -> void:
 	if body.has_method("player"):
 		player_interact_zone = false

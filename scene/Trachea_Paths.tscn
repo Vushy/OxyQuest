@@ -91,6 +91,7 @@ offset_bottom = 334.0
 
 [node name="transition_area1" type="Area2D" parent="."]
 position = Vector2(602, 26)
+collision_layer = 7
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="transition_area1"]
 position = Vector2(15, 13)
@@ -98,6 +99,8 @@ shape = SubResource("RectangleShape2D_lvexd")
 
 [node name="transition_area2" type="Area2D" parent="."]
 position = Vector2(641, 213)
+collision_layer = 7
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transition_area2"]
 position = Vector2(-26, 91)
