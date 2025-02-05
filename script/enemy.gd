@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @onready var ap = $AnimationPlayer
 @onready var sprite = $Sprite2D
-@onready var engage: AudioStreamPlayer2D = $Engage
 
 var speed = 50
 var player_chase = false
@@ -45,7 +44,6 @@ func _on_detection_area_body_exited(body):
 
 func _on_battle_activate_body_entered(body):
 	if body.has_method("player"):
-		engage.play
 		call_deferred("_start_battle")
 	
 		

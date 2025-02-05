@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 CollisionShape2D
 Area2D
 TileMapLayer
@@ -7,12 +8,20 @@ ColorRect
 CanvasLayer
 AudioStreamPlayer2D
 AudioListener2D
+=======
+TileMapLayer
+>>>>>>> parent of de914dc (Dunno)
 Sprite2D
 CharacterBody2D
 Node2D
+AudioStreamPlayer2D
+CollisionShape2D
+Area2D
 AnimatedSprite2D
 ShapeCast2D
+ColorRect
 SpotLight3D
+<<<<<<< HEAD
 =======
 Timer
 CollisionShape2D
@@ -30,3 +39,9 @@ TileMapLayer
 AnimatedSprite2D
 Node2D
 >>>>>>> parent of 9d0b31e (Updates 2025)
+=======
+DirectionalLight2D
+AnimationPlayer
+Timer
+TextureRect
+>>>>>>> parent of de914dc (Dunno)

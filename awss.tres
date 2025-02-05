@@ -1,8 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://7svjf1ohb6dx"]
-
-[ext_resource type="FontFile" uid="uid://d1kjvv33kja" path="res://WeirdScienceNbpRegular-qmBr.ttf" id="1_5ktp2"]
-
-[resource]
-/colors/qwe = Color(0, 0, 0, 1)
-/fonts/font = ExtResource("1_5ktp2")
-/styles/color = null
