@@ -103,10 +103,6 @@ func play_anim(movement):
 		anim.play("back_idle")
 
 
-func player():
-	pass
-
-
 func _on_area_2d_body_entered(body):
 	if body.has_method("NPC"):
 		NPC_IN_RANGE = true

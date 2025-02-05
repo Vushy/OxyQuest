@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdg31y6mbhsja"]
+[gd_scene load_steps=10 format=3 uid="uid://bdg31y6mbhsja"]
 
 [ext_resource type="Script" path="res://script/enemy.gd" id="1_f50sx"]
 [ext_resource type="Texture2D" uid="uid://bvufk5m6javr4" path="res://art/characters/enemy/Sprite-0005-Sheet.png" id="1_mx71k"]
+[ext_resource type="AudioStream" uid="uid://bsa2q4t1ndox7" path="res://sfx/fx-cartoon-94472.mp3" id="3_etfhm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jx8fb"]
 radius = 6.08276
@@ -83,6 +84,9 @@ debug_color = Color(0.513726, 0.423529, 1, 0.419608)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="battle_activate"]
 shape = SubResource("CircleShape2D_cpk34")
 debug_color = Color(1, 1, 1, 0.419608)
+
+[node name="Engage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_etfhm")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

@@ -1,7 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2g1xvn8es8n1"]
+[gd_scene load_steps=9 format=3 uid="uid://b2g1xvn8es8n1"]
 
 [ext_resource type="Texture2D" uid="uid://d0202vecygi5a" path="res://Idle.png" id="1_01cii"]
 [ext_resource type="Script" path="res://script/enemy/enemy_1.gd" id="2_ksjye"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xvdmk"]
+radius = 10.198
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2x4c"]
 atlas = ExtResource("1_01cii")
@@ -40,6 +43,12 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 7
+visibility_layer = 7
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_xvdmk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 modulate = Color(0.792157, 0.341176, 0.792157, 1)

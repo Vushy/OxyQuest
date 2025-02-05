@@ -2,9 +2,14 @@ extends Node2D
 @onready var transition = $"."/transition
 @onready var player = $player
 @onready var heartsContainer =  $CanvasLayer/HBoxContainer
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	transition.play("fade_in")
+	audio_stream_player_2d.play()
 	heartsContainer.setMaxHeart(player.maxHealth)
 	heartsContainer.updateHearts(player.Playerhealth)
 	player.healthChanged.connect(heartsContainer.updateHearts)
@@ -13,6 +18,7 @@ func _process(delta):
 	change_scene()
 	
 	if global.enemyCollide == true:
+
 		transition.play('fade_out')
 
 
@@ -38,4 +44,5 @@ func change_scene():
 
 func _on_transition_animation_finished(anim_name):
 	if global.enemyCollide == true:
+		
 		get_tree().change_scene_to_file("res://scene/battle.tscn")

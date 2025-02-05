@@ -13,12 +13,12 @@ func _process(delta: float) -> void:
 
 func _on_transition_area_1_body_entered(body: Node2D) -> void:
 	if body.has_method('player'):
-		call_deferred("change_scene", "res://scene/Trachea_Extend.tscn")
+		get_tree().change_scene_to_file("res://scene/Trachea_Extend.tscn")
 
 
 func _on_transition_area_2_body_entered(body: Node2D) -> void:
 	if body.has_method('player'):
-		call_deferred("change_scene", "res://scene/Trachea_Extend.tscn")
-		
+		get_tree().change_scene_to_file("res://scene/Trachea_Extend.tscn")
+
 func change_scene(scene_path: String) -> void:
 	get_tree().change_scene_to_file(scene_path)
