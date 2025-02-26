@@ -1,0 +1,10 @@
+~ start
+
+Narakh: [[Hi|Hello|Howdy]], I am Narakh, the guardian of the air! You are the chosen one for defending the kingdomof the lungs! Therefore you are to venture inside and get ready to face off the enemies ahead. 
+Narakh: But beware! Using force isn't enough, you have to think before you strike!
+Narakh: You should enter the portal in order to travel through the kingdom and transform into another being!
+Narakh: I bid you Goodluck to your journey and save the kingdom of Lungs!
+
+set global.portal_interaction = false
+
+=> END	

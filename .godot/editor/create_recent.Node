@@ -1,3 +1,5 @@
+TextureRect
+Panel
 TileMapLayer
 Sprite2D
 CharacterBody2D
@@ -10,6 +12,3 @@ ShapeCast2D
 ColorRect
 SpotLight3D
 DirectionalLight2D
-AnimationPlayer
-Timer
-TextureRect

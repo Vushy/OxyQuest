@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://b37q6g4ji5ecx"]
+
+[ext_resource type="Texture2D" uid="uid://dy2d0ws52g7j8" path="res://art/backgrounds/512x512.png" id="1_q0men"]
+[ext_resource type="PackedScene" uid="uid://croc8pog0cecx" path="res://scene/drag_drop.tscn" id="1_qnae8"]
+[ext_resource type="Texture2D" uid="uid://cwmppjhynsxqo" path="res://art/icon.svg" id="2_prcw0"]
+[ext_resource type="Texture2D" uid="uid://ba55y8qny52n5" path="res://art/objects/icon_interrogation.png" id="3_w8k2j"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = 230.0
+offset_top = -2.0
+offset_right = 742.0
+offset_bottom = 510.0
+texture = ExtResource("1_q0men")
+
+[node name="TextureRect" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 268.0
+offset_top = 580.0
+offset_right = 318.0
+offset_bottom = 630.0
+texture = ExtResource("2_prcw0")
+
+[node name="TextureRect2" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 388.0
+offset_top = 583.0
+offset_right = 438.0
+offset_bottom = 633.0
+texture = ExtResource("3_w8k2j")
+
+[node name="TextureRect3" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 344.0
+offset_top = 165.0
+offset_right = 394.0
+offset_bottom = 215.0
+
+[node name="TextureRect4" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 726.0
+offset_top = 340.0
+offset_right = 776.0
+offset_bottom = 390.0
+
+[node name="TextureRect5" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 221.0
+offset_top = 358.0
+offset_right = 271.0
+offset_bottom = 408.0
+
+[node name="TextureRect6" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 211.0
+offset_top = 299.0
+offset_right = 261.0
+offset_bottom = 349.0

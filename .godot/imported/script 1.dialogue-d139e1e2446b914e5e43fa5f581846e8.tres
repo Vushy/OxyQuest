@@ -1,0 +1,108 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_xhtlm"]
+
+[resource]
+script = ExtResource("1_xhtlm")
+using_states = PackedStringArray()
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Narakh")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": &"title"
+},
+"10": {
+"id": "10",
+"is_snippet": false,
+"next_id": "end",
+"type": &"goto"
+},
+"3": {
+"character": "Narakh",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello|Howdy]], I am Narakh, the guardian of the air! You are the chosen one for defending the kingdomof the lungs! Therefore you are to venture inside and get ready to face off the enemies ahead.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello|Howdy]], I am Narakh, the guardian of the air! You are the chosen one for defending the kingdomof the lungs! Therefore you are to venture inside and get ready to face off the enemies ahead.",
+"type": &"dialogue"
+},
+"4": {
+"character": "Narakh",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "But beware! Using force isn't enough, you have to think before you strike!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But beware! Using force isn't enough, you have to think before you strike!",
+"type": &"dialogue"
+},
+"5": {
+"character": "Narakh",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "You should enter the portal in order to travel through the kingdom and transform into another being!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You should enter the portal in order to travel through the kingdom and transform into another being!",
+"type": &"dialogue"
+},
+"6": {
+"character": "Narakh",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"notes": "",
+"tags": PackedStringArray(),
+"text": "I bid you Goodluck to your journey and save the kingdom of Lungs!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I bid you Goodluck to your journey and save the kingdom of Lungs!",
+"type": &"dialogue"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "global"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "portal_interaction"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}]),
+"is_blocking": true
+},
+"next_id": "10",
+"type": &"mutation"
+}
+}
+raw_text = "~ start
+
+Narakh: [[Hi|Hello|Howdy]], I am Narakh, the guardian of the air! You are the chosen one for defending the kingdomof the lungs! Therefore you are to venture inside and get ready to face off the enemies ahead. 
+Narakh: But beware! Using force isn't enough, you have to think before you strike!
+Narakh: You should enter the portal in order to travel through the kingdom and transform into another being!
+Narakh: I bid you Goodluck to your journey and save the kingdom of Lungs!
+
+set global.portal_interaction = false
+
+=> END	"
+metadata/dialogue_manager_version = "2.41.4"

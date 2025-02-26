@@ -40,6 +40,7 @@ var player_alive = true
 # conditions
 var Correct 
 var playerDmg = 1
+var portal_interaction = false
 
 signal player_should_attack(Correct)
 signal player_hurt

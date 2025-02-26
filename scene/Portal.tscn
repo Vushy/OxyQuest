@@ -1,10 +1,13 @@
-[gd_scene load_steps=21 format=4 uid="uid://duwqj3gsclkbn"]
+[gd_scene load_steps=24 format=4 uid="uid://duwqj3gsclkbn"]
 
 [ext_resource type="Script" path="res://script/Portal.gd" id="1_5d84p"]
 [ext_resource type="TileSet" uid="uid://bke84gx6pjh43" path="res://tileset1.tres" id="2_7w2fx"]
 [ext_resource type="PackedScene" uid="uid://bovex0mwcok7" path="res://scene/player.tscn" id="3_58nap"]
 [ext_resource type="Texture2D" uid="uid://chuq1cqkystxj" path="res://art/objects/altar 224x288 - standing on grass.png" id="4_ilqeg"]
 [ext_resource type="PackedScene" uid="uid://bce53l6xek7r3" path="res://scene/tutorial_npc.tscn" id="5_2g06u"]
+[ext_resource type="PackedScene" uid="uid://cpq5yjdwtbir7" path="res://scene/touchpad_direction.tscn" id="6_yi3xs"]
+[ext_resource type="PackedScene" uid="uid://osi8a4olof4g" path="res://scene/buttons.tscn" id="7_wwmsy"]
+[ext_resource type="PackedScene" uid="uid://81r51837d822" path="res://scene/health.tscn" id="8_315tu"]
 
 [sub_resource type="Animation" id="Animation_fh1bk"]
 length = 0.001
@@ -141,7 +144,7 @@ tile_set = ExtResource("2_7w2fx")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 z_index = -3
-tile_map_data = PackedByteArray("AAAPABEAAwAdAAwAAAAMAA0AAwAdAAwAAAAPAAoAAwAdAAwAAAAXABMAAwAdAAwAAAAYAAsAAwAdAAwAAAANABEAAwAUAAwAAAAPAA4AAwAUAAwAAAAQAA8AAwATAAsAAAAMAAsAAwATAAsAAAAXABIAAwATAA4AAAAWAA0AAwATAA4AAAAWABMAAwASAA0AAAAZAA8AAwASAA0AAAAWAAsAAwASAA0AAAAWABAAAwATAAwAAAAYAA4AAwATAAwAAAAYAAwAAwATAAwAAAAPAA0AAwAMAA0AAAAJAAUAAwAMAAwAAAAbAAUAAwANAA0AAAAKAAIAAwAMAA0AAAAMAAgAAwANAA0AAAAYAAkAAwAWAAoAAAAIAAIAAwAVAAkAAAALAAUAAwAWAAoAAAAWAAoAAwAWAAkAAAALAAEAAwAWAAkAAAAaAAEAAwAXAAkAAAAeAAUAAwAWAAoAAAAdAAIAAwAWAAoAAAAcAAAAAwAVAAkAAAAdAAkAAwAHAAEAAAAGAAkAAwAGAAAAAAAHAAMAAwAGAAEAAAAKAAkAAwAGAAEAAAAcAAMAAwAGAAAAAAAHAA4AAwAGAAAAAAAXABAAAwAKAAIAAAAXABEAAwAKAAMAAAAYABAAAwALAAIAAAAYABEAAwALAAMAAAAKAAYAAwAKAAIAAAAKAAcAAwAKAAMAAAALAAYAAwALAAIAAAALAAcAAwALAAMAAAAHAAcAAwAMAAIAAAAVAA4AAwAMAAIAAAAcAAgAAwAMAAIAAAAJABAAAwAMAAEAAAAZAAYAAwAMAAEAAAAbAAEAAwAMAAEAAAAKAAAAAwAMAAEAAAANAAoAAwAQAAEAAAAaAAkAAwAPAAEAAAAbAAMAAwAOAAAAAAAOAAsAAwAQAAAAAAA=")
+tile_map_data = PackedByteArray("AAAPABEAAwAdAAwAAAAMAA0AAwAdAAwAAAAPAAoAAwAdAAwAAAAXABMAAwAdAAwAAAAYAAsAAwAdAAwAAAANABEAAwAUAAwAAAAPAA4AAwAUAAwAAAAQAA8AAwATAAsAAAAMAAsAAwATAAsAAAAXABIAAwATAA4AAAAWAA0AAwATAA4AAAAWABMAAwASAA0AAAAZAA8AAwASAA0AAAAWAAsAAwASAA0AAAAWABAAAwATAAwAAAAYAA4AAwATAAwAAAAYAAwAAwATAAwAAAAPAA0AAwAMAA0AAAAJAAUAAwAMAAwAAAAbAAUAAwANAA0AAAAKAAIAAwAMAA0AAAAMAAgAAwANAA0AAAAYAAkAAwAWAAoAAAAIAAIAAwAVAAkAAAALAAUAAwAWAAoAAAAWAAoAAwAWAAkAAAALAAEAAwAWAAkAAAAaAAEAAwAXAAkAAAAeAAUAAwAWAAoAAAAdAAIAAwAWAAoAAAAcAAAAAwAVAAkAAAAdAAkAAwAHAAEAAAAGAAkAAwAGAAAAAAAHAAMAAwAGAAEAAAAKAAkAAwAGAAEAAAAcAAMAAwAGAAAAAAAHAA4AAwAGAAAAAAAXABAAAwAKAAIAAAAXABEAAwAKAAMAAAAYABAAAwALAAIAAAAYABEAAwALAAMAAAAKAAYAAwAKAAIAAAAKAAcAAwAKAAMAAAALAAYAAwALAAIAAAALAAcAAwALAAMAAAAHAAcAAwAMAAIAAAAVAA4AAwAMAAIAAAAcAAgAAwAMAAIAAAAJABAAAwAMAAEAAAAZAAYAAwAMAAEAAAAbAAEAAwAMAAEAAAAKAAAAAwAMAAEAAAANAAoAAwAQAAEAAAAaAAkAAwAPAAEAAAAbAAMAAwAOAAAAAAAOAAsAAwAQAAAAAAAMAP//AwAYAAcAAAANAP//AwAYAAcAAAAOAP//AwAYAAcAAAAPAP//AwAYAAcAAAAQAP//AwAYAAcAAAARAP//AwAYAAcAAAASAP//AwAYAAcAAAATAP//AwAYAAcAAAAUAP//AwAYAAcAAAAVAP//AwAYAAcAAAAWAP//AwAYAAcAAAAXAP//AwAYAAcAAAAYAP//AwAYAAcAAAAZAP//AwAYAAcAAAA=")
 tile_set = ExtResource("2_7w2fx")
 
 [node name="transition" type="AnimationPlayer" parent="."]
@@ -151,6 +154,7 @@ libraries = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="transition"]
+visible = false
 offset_right = 602.0
 offset_bottom = 337.0
 
@@ -189,7 +193,43 @@ one_shot = true
 [node name="TutorialNPC" parent="." instance=ExtResource("5_2g06u")]
 light_mask = 7
 visibility_layer = 7
-position = Vector2(304, 106)
+position = Vector2(304, 112)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Node2D" parent="CanvasLayer2" instance=ExtResource("6_yi3xs")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -258.0
+offset_right = 15.0
+offset_bottom = -258.0
+grow_vertical = 0
+scale = Vector2(2.125, 2.125)
+
+[node name="buttons" parent="CanvasLayer2" instance=ExtResource("7_wwmsy")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -337.0
+offset_top = -220.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" parent="CanvasLayer" instance=ExtResource("8_315tu")]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 177.0
+offset_bottom = 59.0
+scale = Vector2(2, 2)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

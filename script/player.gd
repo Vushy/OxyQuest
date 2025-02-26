@@ -99,8 +99,8 @@ func play_anim(movement):
 		anim.flip_h = false
 		if movement == 1:
 			anim.play("back_walk")
-	elif movement == 0:
-		anim.play("back_idle")
+		elif movement == 0:
+			anim.play("back_idle")
 
 
 func player():

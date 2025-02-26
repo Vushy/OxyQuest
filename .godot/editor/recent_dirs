@@ -1,3 +1,5 @@
+res://scene
+res://art
 res://art/tileset
 res://sfx
 res://script/enemy
@@ -6,7 +8,6 @@ res://scene/enemies
 res://
 res://script
 res://art/characters/NPC
-res://scene
 C:/Users/Rayl/Documents/GitHub/OxyQuest
 D:/CAPSTONE
 D:/
@@ -19,4 +20,3 @@ res://art/objects
 res://art/backgrounds
 res://art/characters
 res://art/characters/battleCharacter
-res://art

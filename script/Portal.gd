@@ -1,6 +1,6 @@
 extends Node2D
 @onready var timer = $Timer
-
+@onready var dir_buttons = $CanvasLayer2/Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,7 +13,8 @@ func _ready() -> void:
 		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	dir_buttons.visible = not global.portal_interaction
+
 		
 
 func _on_area_2d_body_entered(body) -> void:

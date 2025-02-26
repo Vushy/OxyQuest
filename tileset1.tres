@@ -1471,6 +1471,12 @@ texture = ExtResource("4_efyo5")
 4:25/0 = 0
 5:25/0 = 0
 5:26/0 = 0
+27:17/0 = 0
+27:18/0 = 0
+27:19/0 = 0
+27:20/0 = 0
+27:21/0 = 0
+27:22/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fnny3"]
 texture = ExtResource("5_vswdw")
