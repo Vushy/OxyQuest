@@ -1,4 +1,6 @@
 TextureRect
+Label
+Timer
 Panel
 TileMapLayer
 Sprite2D
@@ -10,5 +12,3 @@ Area2D
 AnimatedSprite2D
 ShapeCast2D
 ColorRect
-SpotLight3D
-DirectionalLight2D

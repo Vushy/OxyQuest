@@ -4,14 +4,14 @@
 
 [node name="TextureRect" type="TextureRect"]
 custom_minimum_size = Vector2(50, 50)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 106.0
+offset_bottom = 92.0
 expand_mode = 1
 script = ExtResource("1_c2l2w")
 
 [node name="Panel" type="Panel" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 91.0
+offset_bottom = 78.0
 mouse_filter = 2

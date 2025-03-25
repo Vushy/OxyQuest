@@ -1,53 +1,109 @@
-[gd_scene load_steps=5 format=3 uid="uid://b37q6g4ji5ecx"]
+[gd_scene load_steps=12 format=3 uid="uid://b37q6g4ji5ecx"]
 
 [ext_resource type="Texture2D" uid="uid://dy2d0ws52g7j8" path="res://art/backgrounds/512x512.png" id="1_q0men"]
 [ext_resource type="PackedScene" uid="uid://croc8pog0cecx" path="res://scene/drag_drop.tscn" id="1_qnae8"]
-[ext_resource type="Texture2D" uid="uid://cwmppjhynsxqo" path="res://art/icon.svg" id="2_prcw0"]
-[ext_resource type="Texture2D" uid="uid://ba55y8qny52n5" path="res://art/objects/icon_interrogation.png" id="3_w8k2j"]
+[ext_resource type="Script" path="res://script/drag_mode.gd" id="1_y5umx"]
+[ext_resource type="Texture2D" uid="uid://carks3oow8pyr" path="res://art/backgrounds/Space Background.png" id="2_au1xm"]
+[ext_resource type="Texture2D" uid="uid://dblqq7kevnrxr" path="res://art/body_parts/nasalparts.png" id="3_m6u71"]
+[ext_resource type="Texture2D" uid="uid://cu7owq2qttwtc" path="res://art/body_parts/lungs.png" id="4_betl6"]
+[ext_resource type="Texture2D" uid="uid://b73p65w5f0to5" path="res://art/body_parts/bronchi.png" id="5_aah42"]
+[ext_resource type="Texture2D" uid="uid://b8jxdhwvy1bnm" path="res://art/body_parts/trachea.png" id="6_sfnth"]
+[ext_resource type="FontFile" uid="uid://ridyc3bw3omt" path="res://FATPIXEL.TTF" id="8_7f8th"]
+[ext_resource type="FontFile" uid="uid://d1kjvv33kja" path="res://WeirdScienceNbpRegular-qmBr.ttf" id="9_h1m3a"]
+
+[sub_resource type="Theme" id="Theme_6pmme"]
+default_font = ExtResource("9_h1m3a")
+default_font_size = 44
+/fonts/font = ExtResource("8_7f8th")
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_y5umx")
 
-[node name="background" type="TextureRect" parent="."]
-offset_left = 230.0
-offset_top = -2.0
-offset_right = 742.0
-offset_bottom = 510.0
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_au1xm")
+
+[node name="body" type="TextureRect" parent="."]
+offset_left = 367.0
+offset_top = 15.0
+offset_right = 879.0
+offset_bottom = 527.0
 texture = ExtResource("1_q0men")
 
-[node name="TextureRect" parent="." instance=ExtResource("1_qnae8")]
-offset_left = 268.0
-offset_top = 580.0
-offset_right = 318.0
+[node name="TextureRect9" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 578.0
+offset_top = 556.0
+offset_right = 666.0
 offset_bottom = 630.0
-texture = ExtResource("2_prcw0")
+texture = ExtResource("3_m6u71")
+match_id = "nasal_parts"
+
+[node name="TextureRect" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 333.0
+offset_top = 555.0
+offset_right = 421.0
+offset_bottom = 629.0
+texture = ExtResource("4_betl6")
+match_id = "lungs"
 
 [node name="TextureRect2" parent="." instance=ExtResource("1_qnae8")]
-offset_left = 388.0
-offset_top = 583.0
-offset_right = 438.0
-offset_bottom = 633.0
-texture = ExtResource("3_w8k2j")
+offset_left = 459.0
+offset_top = 555.0
+offset_right = 549.0
+offset_bottom = 634.0
+texture = ExtResource("5_aah42")
+match_id = "bronchi"
 
-[node name="TextureRect3" parent="." instance=ExtResource("1_qnae8")]
-offset_left = 344.0
-offset_top = 165.0
-offset_right = 394.0
-offset_bottom = 215.0
+[node name="TextureRect10" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 699.0
+offset_top = 555.0
+offset_right = 787.0
+offset_bottom = 629.0
+texture = ExtResource("6_sfnth")
+match_id = "trachea"
 
 [node name="TextureRect4" parent="." instance=ExtResource("1_qnae8")]
-offset_left = 726.0
-offset_top = 340.0
-offset_right = 776.0
-offset_bottom = 390.0
+offset_left = 833.0
+offset_top = 325.0
+offset_right = 927.0
+offset_bottom = 402.0
+is_target = true
+match_id = "bronchi"
 
 [node name="TextureRect5" parent="." instance=ExtResource("1_qnae8")]
-offset_left = 221.0
-offset_top = 358.0
-offset_right = 271.0
-offset_bottom = 408.0
+offset_left = 285.0
+offset_top = 282.0
+offset_right = 378.0
+offset_bottom = 359.0
+is_target = true
+match_id = "lungs"
 
-[node name="TextureRect6" parent="." instance=ExtResource("1_qnae8")]
-offset_left = 211.0
-offset_top = 299.0
-offset_right = 261.0
-offset_bottom = 349.0
+[node name="TextureRect8" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 775.0
+offset_top = 69.0
+offset_right = 865.0
+offset_bottom = 148.0
+is_target = true
+match_id = "nasal_parts"
+
+[node name="TextureRect7" parent="." instance=ExtResource("1_qnae8")]
+offset_left = 722.0
+offset_top = 171.0
+offset_right = 812.0
+offset_bottom = 251.0
+is_target = true
+match_id = "trachea"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 32.0
+offset_top = 39.0
+offset_right = 72.0
+offset_bottom = 62.0
+theme = SubResource("Theme_6pmme")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
